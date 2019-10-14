@@ -2,12 +2,28 @@
 //
 
 #include <iostream>
+#include"InsertSort.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
-}
+	int n;
+	cout << "请输入要排序的个数：" << endl;
+		cin >> n;
+	int *R;
+	R = (int*)malloc(sizeof(int) * n);
+	int i = 0,j = 0;
+	cout << "请输入待排序的整数：" << endl;
+	for (i = 0; i < n; ++i)
+		cin >> R[i];
+	InsertSort(R, n);
+	for (j = 0; j < n; ++j)
+		cout << R[j] << ' ';
+	//system("pause");
+	return 0;
 
+}
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
 
